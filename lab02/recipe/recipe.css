@@ -1,6 +1,5 @@
 body{
     font-family: Lucida Sans Unicode, Heveltica, Arial, sans-serif;
-    /*background: url("https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg") repeat;*/
 }
 a{
     color:#A4A400;
@@ -18,9 +17,6 @@ h1,h2,h3,h4,h5,h6{
   font-size:22;
   font-weight: bold;
   
-}
-ul {
-    list-style-image: url("https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif");
 }
 
 
