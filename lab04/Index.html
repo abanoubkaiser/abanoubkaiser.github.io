@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/webform.css" type="text/css">
+    <title>New Product Form</title>
+</head>
+<body>
+    <header>
+        <nav style="background-color:rgb(83, 162, 236);"class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="#">MUM Golden Dome Market ::: SRM System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Supplier</a>
+                </li>
+                
+              </ul>
+           
+              <label>Hello!</label>  &ensp;
+              <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Out</button>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="container">
+          <h1>New Product Form</h1>
+
+          <form action="Post">
+            <fieldset>
+              <legend></legend>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="productNumber">Product Number</label>
+                  <input type="text" class="form-control" required name="productNumber" id="productNumber">
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="quantityInStock">Quantity in Stock</label>
+                    <input type="text" required class="form-control" name="quantityInStock" id="quantityInStock" placeholder="0">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" required name="name" id="name">
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="supplier">Supplier</label>
+                    <select name="supplier" id="supplier" required class="form-control">
+                        <option value="" selected>Select a supplier</option>
+                        <option value="Coffee">Abanoub</option>
+                    </select>
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="unitPrice">Unit Price</label>
+                  <input type="number" class="form-control" required name="unitPrice" id="unitPrice" placeholder="0.0">
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="dateSupplied">Date supplied</label>
+                    <input type="text" class="form-control" name="dateSupplied" id="dateSupplied" placeholder="yyyy-mm-dd">
+                    <small class="form-text text-muted">Enter a valid date</small>
+                  </div>
+                </div>
+              </div>
+              <div class="row offset-md-7">
+               
+                
+                  <div class="col-md-3">
+                    <button type="button" class="btn btn-primary btn-block">Reset</button>
+                  </div>
+                  <div class="col-md-3">
+                    <button type="button" class="btn btn-secondary btn-block">Cancel</button>
+                  </div>
+                  <div class="col-md-4">
+                    <button type="button" class="btn btn-primary btn-block bg-green">Add Product</button>
+                  </div>
+              
+                
+                
+               
+
+              </div>
+            
+            </fieldset>
+
+          </form>
+         
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
