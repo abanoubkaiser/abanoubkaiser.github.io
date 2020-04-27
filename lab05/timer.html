@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+
+    <script defer>
+
+        function startTime() {
+        let d = new Date();
+       //   2019-11-4 12:16:01
+       let dateString = `${d.getFullYear()}-${d.getMonth()}-${d.getDay()}
+        ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()} `;
+        document.getElementById('time').innerHTML = dateString;
+        setTimeout(startTime,300);
+        }
+    </script>
+    
+</head>
+<body onload="startTime()">
+    
+
+    <div id="time"></div>
+</body>
+</html>
