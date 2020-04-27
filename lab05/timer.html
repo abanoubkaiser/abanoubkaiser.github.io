@@ -7,18 +7,36 @@
 
     <script defer>
 
-        function startTime() {
-        let d = new Date();
-       //   2019-11-4 12:16:01
-       let dateString = `${d.getFullYear()}-${d.getMonth()}-${d.getDay()}
-        ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()} `;
-        document.getElementById('time').innerHTML = dateString;
-        setTimeout(startTime,300);
-        }
+"use strict";
+const createTimer = () => {
+    setTimeout(displayTime, 1000);
+};
+
+const displayTime = () => {
+    let options = {
+        year: 'numeric', month: 'numeric', day: 'numeric',
+        hour: 'numeric', minute: 'numeric', second: 'numeric',
+    };
+
+    let time = new Date();
+    const dtf = new Intl.DateTimeFormat('en', options);
+    const [
+        {value: mo}, ,
+        {value: day}, ,
+        {value: year}, ,
+        {value: hour}, ,
+        {value: minute}, ,
+        {value: second}, ,
+        {value: am_pm}] = dtf.formatToParts(time)
+
+    document.getElementById("time").innerHTML = `${year}-${mo}-${day} ${hour}:${minute}:${second} ${am_pm} `;
+    createTimer();
+};
+
     </script>
     
 </head>
-<body onload="startTime()">
+<body onload="displayTime()">
     
 
     <div id="time"></div>
