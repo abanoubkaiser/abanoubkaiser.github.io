@@ -2,14 +2,15 @@
 window.onload = function () {
     "use strict";
     document.getElementById("biggerDecorations").onclick = submit;
+    document.getElementById("cancelBiggerDecorations").onclick = cancel;
     document.getElementById("bling").onchange = checkBoxOnChange;
     document.getElementById("pigLatinBtn").onclick = changePigLatin;
     document.getElementById("malkovitch").onclick = changeMalkovitch;
 };
-
+var intervalResult;
 const submit = () => {
     "use strict";
-    setInterval(changeFontSize, 500);
+    intervalResult= setInterval(changeFontSize, 500);
 };
 
 const changeFontSize = () => {
@@ -17,6 +18,10 @@ const changeFontSize = () => {
     const fontSize = window.getComputedStyle(document.getElementById("displayedText")).getPropertyValue("font-size");
     const currentSize = parseInt(fontSize) * 0.75;
     document.getElementById("displayedText").style.fontSize = (parseInt(currentSize) + 2) + "pt";
+};
+
+const cancel = () => {
+    clearInterval(intervalResult);
 };
 
 const changePigLatin = () => {
