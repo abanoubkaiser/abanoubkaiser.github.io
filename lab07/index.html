@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+		question-1
+		_______________________________________________________
+		
+		
+		x = 1;
+		var a = 5;
+		var b = 10;
+		var c = function(a,b,c) {
+			console.log(x); // undefined: hence there will be hoisting for all global variables but x is not reassighend
+			console.log(a);  // 8 : after hoisting is done a will be undefined then in Execution it will be set to 8 as passed
+			var f = function(a, b, c) {
+				b = a; // b=8
+				console.log(b); // 5 : after calling c and hoisting is done for all functions and variables then when it 
+										comes to Execution a will be 8 and will be assigned to 	b then b is 8	
+				b = c;
+				var x = 5;
+			}
+			f(a, b, c);
+			console.log(b); // 9 : as the function scope b still have 9 value as passed 
+			var x = 10;
+		}
+		c(8, 9, 10);
+		console.log(b); // 10 : this is global scope 
+		console.log(x); // 1 :this is global scope 
+		
+		-- -- -- -- -- -- -- -- -- -- -- -- --
+		
+		
+		
+		question-2
+		_______________________________________________________
+		
+		Variables defined inside a function are in local scope while variables defined outside of a function are in the global scope. Each function when invoked creates a new scope.
+				
+				
+		question-3
+		_______________________________________________________
+		Given: javscript code, below 
+			 //scope A
+			 function XFunc(){
+				//Scope B
+				function yfunc(){
+					//scope C
+				}
+			 }
+			 
+		(a) Do statetments in Scope A have access to variables defined in scope B and C?
+			No, scope A can't access nested scope/functions
+		(b) Do statetments in Scope B have access to variables defined in scope A?
+			Yes, Scope of A global to scope of B.
+		(c) Do statetments in Scope B have access to variables defined in scope C?
+			No, scope B can't access below nested scope
+		
+		(d) Do statetments in Scope C have access to variables defined in scope A?
+			yes, the act like global scope
+		(e) Do statetments in Scope C have access to variables defined in scope B?
+			yes, the act like global scope
+			
+		question-4
+		_______________________________________________________	
+			
+			var x = 9;
+			function func(){
+				return x*x;
+			}
+			console.log(func())       //output: 81  //using global variable x =9
+			x = 5;
+			console.log(func())       //output: 25  //using updated global variable x =5
+			
+			
+		question-5
+		_______________________________________________________		
+			var foo = 1;
+			function bar(){
+				if(!foo){
+					var foo = 10;
+				}
+				alert(foo);      //alert 10, since variables declared with var,  have function level scope
+			}
+			bar();
+					
+				
+			
+		
+	</pre>
+</body>
+
+</html>
