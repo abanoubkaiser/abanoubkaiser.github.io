@@ -51,27 +51,24 @@ employeeAnna.doJob("Programmer");
 
 
     //---------------------Question-4 ---------------------------
-
-    //Q4 solution shown below and also in github 
-    //https://birhanegg.github.io/cs472/w1d4/index.html  //link
-
-    //webform1
-    /*
-    $("#webform1").submit(function(event) {
-        console.log($("#email").val());
-        console.log($("#password").val());
-        console.log($("#url").val());
-        event.preventDefault();
+// https://abanoubkaiser.github.io/lab04/login/Index   
+// https://abanoubkaiser.github.io/lab04/Index  
+    $(function(){
+        $('form').submit(function(e){
+            e.preventDefault();  
+            const formId = $(this).attr("id");
+            let newElement=null;
+            if(formId==="productForm"){
+                newElement = $("<div>", { "id": "newDiv", "class": "special" });
+            }
+            jQuery.each($( this ).serializeArray(), function(index, item) {
+                console.log(item.name+ ": " + item.value);  
+                if(formId==="productForm"){
+                    let p = $("<p>",{"text":item.name+ ": " + item.value});
+                    newElement.append(p);
+                }
+            });
+            if(newElement!=null) $('#result').append(newElement);
+        });
     });
-    //webform2
-    $("#webform2").submit(function(event) {
-        console.log($("#productNumber").val());
-        console.log($("#url").val());
-        console.log($("#productName").val());
-        console.log($("#unitPrice").val());
-        console.log($("#supplier").val());
-        console.log($("#supplyDate").val());
-        event.preventDefault();
-    });
-*/
-};
+    ;
