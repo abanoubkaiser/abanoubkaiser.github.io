@@ -17,7 +17,7 @@
 		var b = 10;
 		var c = function(a,b,c) {
 			console.log(x); // undefined: hence there will be hoisting for all global variables but x is not reassighend
-			console.log(a);  // 8 : after hoisting is done a will be undefined then in Execution it will be set to 8 as passed
+			console.log(a);  // 8 :  after hoisting is done a will be undefined then in Execution it will be set to 8 as passed
 			var f = function(a, b, c) {
 				b = a; // b=8
 				console.log(b); // 5 : after calling c and hoisting is done for all functions and variables then when it 
